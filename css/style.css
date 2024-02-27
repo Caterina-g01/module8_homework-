@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(53, 35, 95);
+}
+
+a:active {
+	color: rgb(68, 59, 90);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	line-height: 24px;
+	background-image: url(../img/background.jpg);
+	max-width: 1230px;
+	padding: 0px 15px;
+	margin: 0 auto;
+}
+
+@font-face {
+	font-family: "neznaika-na-lune";
+	src: url("../fonts/neznaika-na-lune.ttf");
+}
+
+.header {
+	margin-top: 150px;
+}
+
+.header-container, .main-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header-title {
+	font-family: "neznaika-na-lune";
+	font-size: 150px;
+	font-weight: 600;
+	color: rgb(77, 56, 1);
+}
+
+.header-load-button, .main-more-button {
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 30px;
+	color: rgb(90, 77, 0);
+	background-image: linear-gradient(to right, rgb(238, 230, 112), rgb(235, 206, 47));
+	font-weight: 600;
+	width: auto;
+	height: auto;
+	border-radius: 10px;
+	font-size: 4vw;
+	font-family: "neznaika-na-lune";
+	border: 0.2vw solid rgb(211, 204, 101);
+	cursor: pointer;
+	padding: 10px 20px;
+}
+
+.main-photo-block {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.photo {
+	width: 24.17%;
+   height: 24.17%;
+	object-fit: cover; 
+	margin-bottom: 10px; 
+}
+
+#loader {
+	font-size: 3vw;
+	color: rgb(187, 159, 0);
+	text-align: center;
+	display: none;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+}
+
+@keyframes appear {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes disappear {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@media only screen and (max-width: 768px) {
+	.header-load-button, .main-more-button {
+		font-size: 45px;
+	}
+}
+
+
