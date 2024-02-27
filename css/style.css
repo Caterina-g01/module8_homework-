@@ -97,6 +97,10 @@ body {
 	padding: 10px 20px;
 }
 
+.main-more-button {
+	margin-bottom: 90px;
+}
+
 .main-photo-block {
 	margin-top: 30px;
 	display: flex;
