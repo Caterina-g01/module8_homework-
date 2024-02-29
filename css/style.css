@@ -75,8 +75,8 @@ body {
 }
 
 .header-title {
-	font-size: 100px;
-	font-weight: 700;
+	font-size: 85px;
+	font-weight: 600;
 	color: rgb(41, 41, 41);
 }
 
@@ -118,7 +118,7 @@ body {
 }
 
 #loader {
-	font-size: 3vw;
+	font-size: 40px;
 	color: rgba(5, 5, 5, 0.507);
 	text-align: center;
 	display: none;
@@ -138,8 +138,19 @@ body {
 
 @media only screen and (max-width: 768px) {
 	.header-load-button, .main-more-button {
-		font-size: 45px;
+		font-size: 40px;
+	}
+	#loader {
+		font-size: 30px;
 	}
 }
 
+
+@media only screen and (max-width: 432px) {
+	.header-load-button, .main-more-button {
+		font-size: 30px;
+		margin-top: 70px;
+		margin-bottom: 30px;
+	}
+}
 
