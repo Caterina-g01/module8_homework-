@@ -143,6 +143,9 @@ body {
 	#loader {
 		font-size: 30px;
 	}
+	.photo {
+		width: 49%;
+	}
 }
 
 
@@ -154,3 +157,8 @@ body {
 	}
 }
 
+@media only screen and (max-width: 320px) {
+	.photo {
+		width: 100%;
+	}
+}
