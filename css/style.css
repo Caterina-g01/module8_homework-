@@ -49,15 +49,19 @@ body {
 	padding: 0;
 	width: 100%;
 	line-height: 24px;
-	background-image: url(../img/background.jpg);
+	background-image: url(../img/background_img.jpg);
+	background-repeat: no-repeat;
+	background-size: 1920px 2100px; /* Фиксированный размер фонового изображения */
 	max-width: 1230px;
 	padding: 0px 15px;
 	margin: 0 auto;
+	font-family: "Kreadon";
 }
 
+
 @font-face {
-	font-family: "neznaika-na-lune";
-	src: url("../fonts/neznaika-na-lune.ttf");
+	font-family: "Kreadon";
+	src: url("../fonts/ofont.ru_Kreadon.ttf");
 }
 
 .header {
@@ -71,30 +75,27 @@ body {
 }
 
 .header-title {
-	font-family: "neznaika-na-lune";
-	font-size: 150px;
-	font-weight: 600;
-	color: rgb(77, 56, 1);
+	font-size: 120px;
+	font-weight: 700;
+	color: rgb(41, 41, 41);
 }
 
 .header-load-button, .main-more-button {
 	display: flex;
 	align-items: center;
 	justify-content: center; 
-	text-align: center;
-	margin-top: 80px;
-	margin-bottom: 30px;
-	color: rgb(90, 77, 0);
-	background-image: linear-gradient(to right, rgb(238, 230, 112), rgb(235, 206, 47));
-	font-weight: 600;
+	margin-top: 120px;
+	margin-bottom: 60px;
+	color: rgb(63, 63, 63);
+	background-image: linear-gradient(to right, rgb(129, 129, 129), rgb(185, 185, 185));
+	font-weight: 500;
 	width: auto;
 	height: auto;
-	border-radius: 10px;
+	border-radius: 15px;
 	font-size: 4vw;
-	font-family: "neznaika-na-lune";
-	border: 0.2vw solid rgb(211, 204, 101);
+	border: 0.2vw solid rgb(46, 46, 46, 0.3);
 	cursor: pointer;
-	padding: 10px 20px;
+	padding: 20px 20px;
 }
 
 .main-more-button {
@@ -118,7 +119,7 @@ body {
 
 #loader {
 	font-size: 3vw;
-	color: rgb(187, 159, 0);
+	color: rgba(5, 5, 5, 0.507);
 	text-align: center;
 	display: none;
 	padding-top: 1vw;

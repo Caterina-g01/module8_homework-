@@ -1,5 +1,3 @@
-"use strict";
-
 const loadBtn = document.querySelector(".header-load-button");
 const moreBtn = document.querySelector(".main-more-button");
 const randomPhoto = document.getElementById("photo");
@@ -40,7 +38,6 @@ const fetchData = async () => {
 		let response = await data.json();
 		if (response) {
 			loadPhoto(response);
-			moreBtn.style.display = "block";
 		}
 	} catch (error) {
 		console.error(error.message, "Что-то пошло не так!");
@@ -50,28 +47,34 @@ const fetchData = async () => {
 };
 
 const loadMorePhotos = async () => {
-	showLoader();
-	try {
-		let data = await fetch(`https://jsonplaceholder.typicode.com/photos?_start=${offset}&_limit=60`);
-		let response = await data.json();
-		if (response) {
-			offset += 30;
-			loadPhoto(response);
+	if (randomPhoto.children.length > 0) {
+		showLoader();
+		try {
+			let data = await fetch(`https://jsonplaceholder.typicode.com/photos?_start=${offset}&_limit=60`);
+			let response = await data.json();
+			if (response) {
+				offset += 30;
+				loadPhoto(response);
+			}
+		} catch (error) {
+			console.error(error.message, "Что-то пошло не так!");
+		} finally {
+			hideLoader();
 		}
-	} catch (error) {
-		console.error(error.message, "Что-то пошло не так!");
-	} finally {
-		hideLoader();
 	}
 };
 
+
 const loadPhoto = (arr) => {
 	if (arr) {
-		arr.forEach((elem) => {
+		arr.forEach((elem, index) => {
 			let img = document.createElement("img");
 			img.src = elem.url;
 			img.classList.add("photo");
 			randomPhoto.appendChild(img);
+			if (index === arr.length - 1) {
+				moreBtn.style.display = "block";
+			}
 		});
 	}
 };
