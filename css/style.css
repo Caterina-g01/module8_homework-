@@ -75,7 +75,7 @@ body {
 }
 
 .header-title {
-	font-size: 120px;
+	font-size: 100px;
 	font-weight: 700;
 	color: rgb(41, 41, 41);
 }
@@ -92,7 +92,7 @@ body {
 	width: auto;
 	height: auto;
 	border-radius: 15px;
-	font-size: 4vw;
+	font-size: 3vw;
 	border: 0.2vw solid rgb(46, 46, 46, 0.3);
 	cursor: pointer;
 	padding: 20px 20px;
